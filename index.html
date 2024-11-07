@@ -4,6 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>파이어베이스 CRUD 및 인증 기능 바닐라 버전</title>
+  <!-- css -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- js -->
+  <script type="module" src="js/app.js" defer></script>
  </head>
- <body></body>
+ <body>
+  <div id="app">
+   <h1>파이어베이스를 이용한 CRUD 및 인증</h1>
+
+   <!-- 로그인 및 회원가입 섹션 -->
+   <div id="auth-section">
+    <input type="email" id="email" placeholder="이메일" />
+    <input type="password" id="password" placeholder="비밀번호" />
+    <button id="sign-up-btn">회원가입</button>
+    <button id="sign-in-btn">로그인</button>
+    <button id="google-sign-in-btn">구글 로그인</button>
+   </div>
+   <p id="message"></p>
+   <button id="logout-btn" class="hidden">로그아웃</button>
+
+   <!-- 글 작성 및 목록 표시 섹션 -->
+   <div id="board-section">
+    <h2>글 목록</h2>
+    <div id="new-post-section">
+     <input
+      type="text"
+      id="new-post-content"
+      placeholder="새로운 글 작성하기"
+     />
+     <button id="add-post-btn">글 등록하기</button>
+    </div>
+    <ul id="post-list"></ul>
+   </div>
+  </div>
+ </body>
 </html>
